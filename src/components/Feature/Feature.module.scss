@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+
+.feature {
+ display: flex;
+ padding: 75px 0 130px 0;
+
+ &__img {
+  padding-right: 150px;
+ }
+
+ &__box {
+  max-width: 450px;
+ }
+
+ &__item {
+  display: flex;
+  align-items: center;
+
+  & + .feature__item {
+   margin-top: 15px;
+  }
+ }
+}

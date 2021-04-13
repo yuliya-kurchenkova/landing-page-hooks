@@ -1,0 +1,21 @@
+@import '../../assets/scss/variables';
+
+
+.mapTemplate {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 75px;
+}
+
+.mapTemplate-box {
+   &__subtitle {
+      max-width: 353px;
+   }
+
+   &__text {
+      max-width: 555px;
+      padding-bottom: 155px;
+   }
+}
