@@ -1,0 +1,28 @@
+@import '../../assets/scss/variables';
+
+.navTemplate {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 599px) {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__item {
+
+    & + .navTemplate__item {
+      margin-left: 40px;
+    }
+  }
+
+  &__link {
+    font-size: $font-size-link;
+    color: $color-link;
+    text-align: center;
+  }
+}

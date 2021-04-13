@@ -1,0 +1,35 @@
+@import '../../assets/scss/variables';
+
+.headerTemplate {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 0 50px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 599px) {
+    flex-direction: column;
+  }
+
+  &__img {
+    margin-right: 20px;
+  }
+
+  &__link {
+    font-size: $font-size-link;
+    color: $color-title;
+    text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-text {
+    position: relative;
+    bottom: 10px;
+  }
+
+}
