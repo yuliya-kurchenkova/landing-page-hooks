@@ -3,6 +3,7 @@ import classes from './HeaderTemplate.module.scss'
 import NavTemplate from "../NavTemplate/NavTemplate";
 import logo from '../../assets/img/logo.png'
 import ButtonTemplate from '../ButtonTemlate/ButtonTemplate'
+import MenuTemplate from "../MenuTemplate/MenuTemplate";
 
 
 const HeaderTemplate = () => (

@@ -30,7 +30,6 @@ const MainTemplate = () => {
                         <p className={classes['mainTemplate__text']}>Users</p>
                     </div>
                 </div>
-                {/*<div className={'mainTemplate__line'}> </div>*/}
                 <div className={classes['mainTemplate__box']}>
                     <div>
                         <img

@@ -23,7 +23,7 @@ const PriceTemplate = () => {
                         />
                         <h4 className={classes['priceTemplate__subtitle']}>Free Plan</h4>
                     </div>
-                    <div>
+                    <div className={classes['priceTemplate-box__item']}>
                         <div className={classes['priceTemplate__item']}>
                             <img
                                 src={vector}
@@ -70,7 +70,7 @@ const PriceTemplate = () => {
                     />
                     <h4 className={classes['priceTemplate__subtitle']}>Standard Plan</h4>
                 </div>
-                <div>
+                <div className={classes['priceTemplate-box__item']}>
                     <div className={classes['priceTemplate__item']}>
                         <img
                             src={vector}
@@ -106,6 +106,7 @@ const PriceTemplate = () => {
                         />
                         <p className='app__small-text app__small-text_marLeft'>Connect Anyware</p>
                     </div>
+                </div>
                     <div>
                         <h3>$9 / mo</h3>
                         <ButtonTemplate
@@ -113,8 +114,6 @@ const PriceTemplate = () => {
                             className={'app__button app__button_border'}
                         />
                     </div>
-
-                </div>
             </div>
             <div className={classes['priceTemplate__box']}>
                 <div>
@@ -125,7 +124,7 @@ const PriceTemplate = () => {
                     />
                     <h4 className={classes['priceTemplate__subtitle']}>Free Plan</h4>
                 </div>
-                <div className={'priceTemplate__checkbox'}>
+                <div className={classes['priceTemplate-box__item']}>
                     <div className={classes['priceTemplate__item']}>
                         <img
                             src={vector}

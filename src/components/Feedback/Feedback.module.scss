@@ -1,0 +1,19 @@
+@import '../../assets/scss/variables';
+
+
+.feedback {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 0 60px;
+
+  &__subtitle {
+    max-width: 353px;
+  }
+
+  &__text {
+    max-width: 555px;
+    padding-bottom: 155px;
+  }
+}
