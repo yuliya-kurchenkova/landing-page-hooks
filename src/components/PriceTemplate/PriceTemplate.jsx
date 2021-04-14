@@ -156,10 +156,10 @@ const PriceTemplate = () => {
                     </div>
                 </div>
                     <div>
-                        <h3>$12 / mo</h3>
+                            <h3>$12 / mo</h3>
                         <ButtonTemplate
                             buttonText={'Select'}
-                            className={'app__button app__button_border'}
+                            className={'app__button app__button_border-success'}
                         />
                     </div>
 

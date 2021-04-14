@@ -32,4 +32,12 @@
     border-radius: $border-radius-border;
     border: $borderBtn-header;
   }
+
+  &_border-success {
+    height: 45px;
+    background: $background-button;
+    color: $color-white;
+    border-radius: $border-radius-border;
+    border: $borderBtn-header;
+  }
 }
