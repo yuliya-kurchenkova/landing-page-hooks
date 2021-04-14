@@ -1,0 +1,97 @@
+@import '../../assets/scss/variables' ;
+
+body {
+  font: $font-size-base $font-global;
+  line-height: 1.2;
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.app {
+
+  &__logo {
+    font-size: $font-size-logo;
+    font-weight: 500;
+    color: $color-logo;
+
+    @media screen and (max-width: 599px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__background {
+    background-image: url("../../assets/img/banner.png");
+    width: 100%;
+    background-position: top 127px right 122px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 767px) {
+      background-image: unset;
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (max-width: 767px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-title;
+    color: $color-title;
+    font-weight: 700;
+
+    &_pb {
+      padding-bottom: 20px;
+
+      @media screen and (max-width: 599px) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    color: $color-text;
+
+    &_pb {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    font-size:$font-size-subtitle;
+    color: $color-title;
+    font-weight: 500;
+
+    &_pb {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__small-text {
+    font-size: $font-size-small;
+    font-weight: 400;
+
+    &_ml {
+      margin-left: 12px;
+    }
+
+    &_marLeft {
+      margin-left: 25px;
+    }
+  }
+}
+
+button + button {
+  margin-left: 15px;
+}

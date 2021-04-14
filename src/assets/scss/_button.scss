@@ -1,0 +1,35 @@
+@import '../../assets/scss/variables' ;
+
+
+.app__button {
+  padding: 0 50px;
+  font: $font-size-base $font-global;
+  cursor: pointer;
+  transition: opacity .15s ease-in;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &_primary {
+    height: 60px;
+    border: $borderBtn-header;
+    color: $color-white;
+    border-radius: $border-radius-primary;
+    background: $background-button;
+
+  }
+
+  &_success {
+    height: 45px;
+    background: $background-button;
+  }
+
+  &_border {
+    height: 45px;
+    background: $color-white;
+    color: $primary;
+    border-radius: $border-radius-border;
+    border: $borderBtn-header;
+  }
+}
