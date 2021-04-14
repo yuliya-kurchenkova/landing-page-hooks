@@ -1,0 +1,61 @@
+@import '../../assets/scss/variables';
+
+.priceTemplate {
+  background: #F6F6F6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 0 75px;
+
+    &__container {
+      display: flex;
+    }
+
+    &__box {
+      width: 330px;
+      padding: 80px 0 50px;
+      background: $color-white;
+      margin-right: 50px;
+      border: $border-price;
+      box-sizing: border-box;
+      border-radius: $border-radius-primary;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & + .priceTemplate__item {
+        margin-top: 10px;
+      }
+    }
+
+    &__img {
+      padding-bottom: 30px;
+    }
+
+    &__subtitle {
+      font-size: $font-size-small-subtitle;
+      padding-bottom: 30px;
+    }
+
+    &__checkbox {
+      width: 185px;
+      padding: 0 75px 50px 70px;
+    }
+}
+
+
+.priceTemplate-box {
+
+    &__subtitle {
+      max-width: 353px;
+    }
+
+    &__text {
+      max-width: 555px;
+      padding-bottom: 60px;
+    }
+  }

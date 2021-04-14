@@ -5,9 +5,8 @@ import logo from '../../assets/img/logo.png'
 import ButtonTemplate from '../ButtonTemlate/ButtonTemplate'
 
 
-const HeaderTemplate = props => {
+const HeaderTemplate = () => (
 
-    return (
         <div className={classes.headerTemplate}>
             <div className={classes['headerTemplate__box']}>
                 <a
@@ -34,6 +33,6 @@ const HeaderTemplate = props => {
            </div>
         </div>
     )
-}
 
-export default HeaderTemplate
+
+export default HeaderTemplate;

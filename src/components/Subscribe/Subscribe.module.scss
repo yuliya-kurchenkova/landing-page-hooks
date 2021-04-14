@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables';
+
+.subscribe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 58px 0 58px;
+
+  &__box {
+    width: 371px;
+  }
+}

@@ -24,30 +24,28 @@ const Feature = () => (
                     <p className='app__small-text app__small-text_ml'>Powerfull online protection.</p>
                 </div>
                     <div className={classes['feature__item']}>
-                    <img
-                        src={check}
-                        alt=""
-                    />
-                    <p className='app__small-text app__small-text_ml'>Internet without borders.</p>
+                        <img
+                            src={check}
+                            alt=""
+                        />
+                        <p className='app__small-text app__small-text_ml'>Internet without borders.</p>
                     </div>
-                <div className={classes['feature__item']}>
-                    <img
-                        src={check}
-                        alt=""
-                    />
-                    <p className='app__small-text app__small-text_ml'>Supercharged VPN</p>
-                </div>
                     <div className={classes['feature__item']}>
-                    <img
-                        src={check}
-                        alt=""
-                    />
-                    <p className='app__small-text app__small-text_ml'>No specific time limits.</p>
+                        <img
+                            src={check}
+                            alt=""
+                        />
+                        <p className='app__small-text app__small-text_ml'>Supercharged VPN</p>
+                    </div>
+                    <div className={classes['feature__item']}>
+                        <img
+                            src={check}
+                            alt=""
+                        />
+                        <p className='app__small-text app__small-text_ml'>No specific time limits.</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
-
 )
 export default Feature;

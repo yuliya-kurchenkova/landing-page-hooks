@@ -1,0 +1,60 @@
+@import '../../assets/scss/variables';
+
+
+.footerTemplate {
+  background: $background-footer;
+
+  &__card {
+    display: flex;
+    padding: 183px 0 100px;
+  }
+  &__box {
+    width: 340px;
+  }
+
+  &__container {
+    padding-bottom: 20px;
+  }
+
+  &__img {
+    margin-right: 20px;
+  }
+
+  &__logo-text {
+    position: relative;
+    bottom: 10px;
+  }
+
+   &__socials {
+     display: flex;
+   }
+
+   &__copy {
+     color: $color-copy;
+   }
+
+   &__subtitle {
+    font-size: $font-size-small-subtitle;
+    padding-bottom: 20px;
+   }
+
+   &__item {
+
+    & + .footerTemplate__item {
+      margin-top: 10px;
+    }
+   }
+}
+
+.footerTemplate-box {
+  &__text {
+    padding-bottom: 30px;
+  }
+
+  &__link {
+    width: 130px;
+  }
+}
+
+
+
