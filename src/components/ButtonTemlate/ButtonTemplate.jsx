@@ -7,7 +7,7 @@ function  ButtonTemplate (props) {
         // <div className={myClasses.map(el => `${el.className} `)}>
        <>
             <button className={props.className}
-                    onClick={props.clickHandler}
+                    onClick={props.onClick}
             >
                 {props.buttonText}
             </button>

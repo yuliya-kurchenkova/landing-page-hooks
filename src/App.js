@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './assets/scss/style.scss'
 import HeaderTemplate from './components/HeaderTemplate/HeaderTemplate'
 import MainTemplate from "./components/MainTemplate/MainTemplate"
@@ -8,17 +8,26 @@ import PriceTemplate from "./components/PriceTemplate/PriceTemplate";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Subscribe from "./components/Subscribe/Subscribe";
 import FooterTemplate from "./components/FooterTemplate/FooterTemplate";
-import SliderTemplate from "./components/SliderTemplate/SliderTemplate";
 import Feedback from "./components/Feedback/Feedback";
 import MenuTemplate from "./components/MenuTemplate/MenuTemplate";
+import sliderBlock from '../src/constants/Sliders'
+
+
 
 function App() {
+    const arr = sliderBlock
+    console.log(arr)
+    const [isModalType, setIsModalType] = useState('')
+
   return (
       <>
           <div className={'app__background'}>
               <div className={'app__wrapper'}>
                   <MenuTemplate />
-                  <HeaderTemplate/>
+                  <HeaderTemplate
+                      onChange={setIsModalType}
+                      value={isModalType}
+                  />
                   <MainTemplate />
                   <Feature />
               </div>
@@ -29,15 +38,12 @@ function App() {
                   <Sponsors />
                   <Subscribe />
               </div>
-          <Feedback />
+          <Feedback
+              sliderBlock={sliderBlock}
+          />
           <FooterTemplate />
       </>
 );
 }
 export default App;
 
-// isModal useState(false)
-// передаем в хеадер прпс ис модал, и метод который меняет пропс
-// модалка-cоздание 1) имя. почта пароль (с типами, передать пропсы) кнопка(console.log(с данными))
-// модалка-логин 2) 2 поля- логин и пароль кнопка(console.log(с данными))
-//

@@ -3,7 +3,8 @@ import classes from "./Feedback.module.scss"
 import SliderTemplate from "../SliderTemplate/SliderTemplate";
 
 
-const Feedback = () => {
+
+const Feedback = (props) => {
     return (
     <div className={classes.feedback}>
         <div className={classes['feedback__subtitle']}>
@@ -12,7 +13,9 @@ const Feedback = () => {
         <div className={classes['feedback__text']}>
             <p className='app__text'>See LaslesVPN everywhere to make it easier for you when you move locations.</p>
         </div>
-        <SliderTemplate />
+        <SliderTemplate
+            sliderBlock={props.sliderBlock}
+        />
     </div>
     )
 }

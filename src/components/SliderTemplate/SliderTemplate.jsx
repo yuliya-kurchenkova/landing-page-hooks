@@ -1,21 +1,23 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Virtual } from 'swiper';
 import 'swiper/swiper.scss';
 
 
-const SliderTemplate = () => {
+SwiperCore.use([Virtual]);
+
+const SliderTemplate = (props) => {
+    console.log(props)
     return (
-            <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-            >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-            </Swiper>
+        <Swiper spaceBetween={50} slidesPerView={3} virtual>
+            {props.sliderBlock.map((slideContent, index) => {
+                return (
+                <SwiperSlide key={index} virtualIndex={index}>
+                    {slideContent.name}
+                </SwiperSlide>
+            )
+            })}
+        </Swiper>
     )
 }
 export default SliderTemplate;
