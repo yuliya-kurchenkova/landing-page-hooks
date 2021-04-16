@@ -2,4 +2,13 @@
 
 .inputTemplate {
 
+  &__input {
+    border-radius: 10px;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    padding: 7px;
+    border: 0;
+    box-shadow: 0 0 16px 6px rgba(0, 0, 0, .6);
+  }
 }

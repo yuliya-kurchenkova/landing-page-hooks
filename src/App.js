@@ -11,22 +11,32 @@ import FooterTemplate from "./components/FooterTemplate/FooterTemplate";
 import Feedback from "./components/Feedback/Feedback";
 import MenuTemplate from "./components/MenuTemplate/MenuTemplate";
 import sliderBlock from '../src/constants/Sliders'
+import ModalTemplate from "./components/ModalTemplate/ModalTemplate";
 
 
 
 function App() {
-    const arr = sliderBlock
-    console.log(arr)
+    const [isVisibleModal, setVisibleModal] = useState(false);
     const [isModalType, setIsModalType] = useState('')
+
+    const modalAction = (data, type) => {
+        setVisibleModal(data);
+        setIsModalType(type);
+    }
+    const toggleModal = () => {
+        setVisibleModal(!isVisibleModal);
+    }
 
   return (
       <>
+          {
+              isVisibleModal ? <ModalTemplate toggleModal={toggleModal} isModalType={isModalType}/> : null
+          }
           <div className={'app__background'}>
               <div className={'app__wrapper'}>
                   <MenuTemplate />
                   <HeaderTemplate
-                      onChange={setIsModalType}
-                      value={isModalType}
+                     modalAction={modalAction}
                   />
                   <MainTemplate />
                   <Feature />

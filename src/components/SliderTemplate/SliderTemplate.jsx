@@ -14,6 +14,9 @@ const SliderTemplate = (props) => {
                 return (
                 <SwiperSlide key={index} virtualIndex={index}>
                     {slideContent.name}
+                    {slideContent.city}
+                    {slideContent.grade}
+                    {slideContent.text}
                 </SwiperSlide>
             )
             })}

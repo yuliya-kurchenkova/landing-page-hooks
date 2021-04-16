@@ -2,16 +2,18 @@ import React from 'react'
 
 
 function  ButtonTemplate (props) {
-    // const myClasses = []
+    let modalType = ''
+    if (props.modalEffect) {
+        modalType = props.buttonText === 'Sign Up' ? 'signup' : 'signin';
+    }
     return (
-        // <div className={myClasses.map(el => `${el.className} `)}>
-       <>
+        <>
             <button className={props.className}
-                    onClick={props.onClick}
+                    onClick={() => props.onClick(true, modalType)}
             >
                 {props.buttonText}
             </button>
-       </>
+        </>
     )
 }
 export default ButtonTemplate;

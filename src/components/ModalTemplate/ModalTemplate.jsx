@@ -4,15 +4,11 @@ import ButtonTemplate from "../ButtonTemlate/ButtonTemplate";
 
 const ModalTemplate = (props) => {
     const [inputName, setInputName] = useState("");
-    const [inputLogin, setInputLogin] = useState("");
     const [inputPassword, setInputPassword] = useState("");
     const [inputEmail, setInputEmail] = useState("");
 
     const handlerName = e => {
         setInputName(e.target.value)
-    }
-    const handlerLogin = e => {
-        setInputLogin(e.target.value)
     }
     const handlerPassword = e => {
         setInputPassword(e.target.value)
@@ -23,44 +19,51 @@ const ModalTemplate = (props) => {
 
     return (
         <div className='app-modal'>
-            <h2>{props.title}</h2>
-            <InputTemplate
-                placeholder={'name'}
-                value={inputName}
-                onChange={handlerName}
-            />
-            <InputTemplate
-                placeholder={'login'}
-                value={inputLogin}
-                onChange={handlerLogin}
-            />
-            <InputTemplate
-                placeholder={'password'}
-                value={inputPassword}
-                onChange={handlerPassword}
-            />
-            <InputTemplate
-                placeholder={'e-mail'}
-                value={inputEmail}
-                onChange={handlerEmail}
-            />
-
-            <ButtonTemplate />
-            {
-                props.name ?
-                    <input
-                        type={props.name}
+            <div className='app-modal__header'>
+                <ButtonTemplate
+                    buttonText={'x'}
+                    onClick={props.toggleModal}
+                    className='app__button app__button_back'
+                />
+                {
+                    props.isModalType === 'signup' ?
+                        <h2>Регистрация</h2>
+                        : <h2>Aвторизация</h2>
+                }
+            </div>
+            {/*<div className='app-modal__content'>*/}
+                {
+                    props.isModalType === 'signup' ?  <InputTemplate
+                        placeholder={'name'}
+                        value={inputName}
+                        onChange={handlerName}
                     />
-                    : null
-            }
+                   : null
+                }
+            {/*</div>*/}
+                <InputTemplate
+                    placeholder={'e-mail'}
+                    value={inputEmail}
+                    onChange={handlerEmail}
+                />
+                <InputTemplate
+                    placeholder={'password'}
+                    value={inputPassword}
+                    onChange={handlerPassword}
+                />
+                <div className='app-modal__footer'>
+                    {
+                        props.isModalType === 'signup' ?  <ButtonTemplate
+                            buttonText={'зарегистрироваться'}
+                            className='app__button app__button_modal'
+                        /> :  <ButtonTemplate
+                            buttonText={'войти'}
+                            className='app__button app__button_modal'
+                        />
+                    }
+                </div>
         </div>
     )
 }
 export default ModalTemplate;
 
-
-//прокидывать пропс например строку 'signin' или 'signup'
-// props.typeModal ? <button> sign up .../> : <button> sign in ..../>
-//по факту модалка одна и та же так что можешь попробовать сделать так
-//в зависимости от условия появится еще один инпут
-//и методы разные при клике в зависимости от пропса
