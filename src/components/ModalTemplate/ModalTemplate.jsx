@@ -15,7 +15,26 @@ const ModalTemplate = (props) => {
     }
     const handlerEmail = e => {
         setInputEmail(e.target.value)
+        console.log(signUp(e))
     }
+    function signUp() {
+        const user = {
+            name: inputName,
+            password: inputPassword,
+            email: inputEmail
+        }
+        console.log(user)
+    }
+    function signIp() {
+        const user = {
+            password: inputPassword,
+            email: inputEmail
+        }
+        console.log(user)
+    }
+
+    const disabledSignUp = !(inputName && inputPassword && inputEmail)
+    const disabledSignIn = !(inputPassword && inputEmail)
 
     return (
         <div className='app-modal'>
@@ -33,7 +52,8 @@ const ModalTemplate = (props) => {
             </div>
             {/*<div className='app-modal__content'>*/}
                 {
-                    props.isModalType === 'signup' ?  <InputTemplate
+                    props.isModalType === 'signup'
+                        ?  <InputTemplate
                         placeholder={'name'}
                         value={inputName}
                         onChange={handlerName}
@@ -53,12 +73,17 @@ const ModalTemplate = (props) => {
                 />
                 <div className='app-modal__footer'>
                     {
-                        props.isModalType === 'signup' ?  <ButtonTemplate
+                        props.isModalType === 'signup'
+                            ?  <ButtonTemplate
                             buttonText={'зарегистрироваться'}
                             className='app__button app__button_modal'
+                            onClick={signUp}
+                            disabled={disabledSignUp}
                         /> :  <ButtonTemplate
                             buttonText={'войти'}
                             className='app__button app__button_modal'
+                            onClick={signIp}
+                            disabled={disabledSignIn}
                         />
                     }
                 </div>

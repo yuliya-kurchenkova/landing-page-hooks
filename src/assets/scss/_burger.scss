@@ -1,7 +1,7 @@
 @import '../../assets/scss/variables' ;
 
 .bm-burger-button {
-  display: block;
+  display: none;
   position: fixed;
   width: 36px;
   height: 30px;
@@ -65,6 +65,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  text-align: center;
+  & + .bm-item {
+    margin-top: 20px;
+  }
+  button + button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
 }
 
 /* Styling of overlay */

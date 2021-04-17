@@ -10,6 +10,7 @@
 
     &__container {
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__box {
@@ -39,6 +40,10 @@
       padding-bottom: 30px;
     }
 
+    &__subtitle-text {
+      padding-bottom: 15px;
+   }
+
     &__subtitle {
       font-size: $font-size-small-subtitle;
       padding-bottom: 30px;
@@ -61,6 +66,10 @@
 
     &__item {
       min-height: 250px;
+
+      @media screen and (max-width: 1024px) {
+        min-height: 0;
+      }
     }
   }
 }

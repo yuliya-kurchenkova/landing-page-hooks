@@ -10,6 +10,7 @@ const Feature = () => (
             <img
                 src={feature}
                 alt=""
+
             />
         </div>
         <div className={classes['feature__box']}>

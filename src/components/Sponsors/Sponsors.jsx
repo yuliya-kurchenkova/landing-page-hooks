@@ -9,11 +9,13 @@ import classes from './Sponsors.module.scss'
 
 const Sponsors = () => (
     <div className={classes.sponsors}>
-        <img
-            src={netflix}
-            alt=""
-            className={classes['sponsors__img']}
-        />
+            <div>
+                <img
+                    src={netflix}
+                    alt=""
+                    className={classes['sponsors__img']}
+                />
+            </div>
         <img
             src={reddit}
             alt=""

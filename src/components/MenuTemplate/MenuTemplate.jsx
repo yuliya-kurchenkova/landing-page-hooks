@@ -1,6 +1,7 @@
 import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import ButtonTemplate from "../ButtonTemlate/ButtonTemplate";
+import classes from './MenuTemplate.module.scss'
 
 
 const MenuTemplate = () => {
@@ -15,6 +16,7 @@ const MenuTemplate = () => {
            <a id="contact" className="menu-item" href="/">Pricing</a>
            <a id="contact" className="menu-item" href="/">Testimonials</a>
            <a id="contact" className="menu-item" href="/">Help</a>
+       <div className={classes.menuTemplate}>
            <ButtonTemplate
                buttonText={'Sign In'}
                className={'app__button'}
@@ -23,6 +25,7 @@ const MenuTemplate = () => {
                buttonText={'Sign Up'}
                className={'app__button app__button_border'}
            />
+       </div>
        </Menu>
    )
 

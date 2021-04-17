@@ -54,7 +54,7 @@ const PriceTemplate = () => {
                         </div>
                     </div>
                         <div>
-                            <h3>Free</h3>
+                            <h3 className={classes['priceTemplate__subtitle-text']}>Free</h3>
                             <ButtonTemplate
                                 buttonText={'Select'}
                                 className={'app__button app__button_border'}
@@ -108,7 +108,7 @@ const PriceTemplate = () => {
                     </div>
                 </div>
                     <div>
-                        <h3>$9 / mo</h3>
+                        <h3 className={classes['priceTemplate__subtitle-text']}>$9 / mo</h3>
                         <ButtonTemplate
                             buttonText={'Select'}
                             className={'app__button app__button_border'}
@@ -155,7 +155,7 @@ const PriceTemplate = () => {
                     </div>
                 </div>
                     <div>
-                            <h3>$12 / mo</h3>
+                            <h3 className={classes['priceTemplate__subtitle-text']}>$12 / mo</h3>
                         <ButtonTemplate
                             buttonText={'Select'}
                             className={'app__button app__button_border-success'}

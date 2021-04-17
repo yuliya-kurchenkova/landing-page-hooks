@@ -9,7 +9,9 @@ function  ButtonTemplate (props) {
     return (
         <>
             <button className={props.className}
-                    onClick={() => props.onClick(true, modalType)}
+                    disabled={props.disabled}
+                    className={props.disabled ? 'buttonTemplate__btn buttonTemplate__btn_disabled' : 'buttonTemplate__btn'}
+                    onClick={props.modalEffect ?  () => props.onClick(true, modalType) :  props.onClick}
             >
                 {props.buttonText}
             </button>
