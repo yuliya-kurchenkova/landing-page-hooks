@@ -10,17 +10,19 @@
     @media screen and (max-width: 1024px) {
       flex-direction: column;
       text-align: center;
+
     }
   }
 
   &__container {
     display: flex;
     justify-content: space-around;
-    width: 1140px;
+
     padding: 65px 0 75px;
 
     @media screen and (max-width: 599px) {
       flex-direction: column;
+
     }
   }
 

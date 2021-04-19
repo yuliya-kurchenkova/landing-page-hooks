@@ -16,4 +16,15 @@
     max-width: 555px;
     padding-bottom: 155px;
   }
+
+  &__slider {
+    width: 100%;
+
+    &-item {
+      background: white;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 50px;
+    }
+  }
 }

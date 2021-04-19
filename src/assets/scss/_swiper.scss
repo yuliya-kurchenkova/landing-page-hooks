@@ -1,0 +1,22 @@
+.swiper {
+
+  &-container {
+    min-height: 340px !important;
+  }
+
+  &-button-prev, &-button-next {
+    top: 290px !important;
+    left: 40px !important;
+  }
+
+  &-button-next {
+    left: 80px !important;
+  }
+
+  &-pagination-bullets {
+    right: 10px !important;
+    width: 200px !important;
+    left: auto!important;
+    position: absolute;
+  }
+}

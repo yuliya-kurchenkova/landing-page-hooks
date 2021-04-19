@@ -8,9 +8,9 @@ import PriceTemplate from "./components/PriceTemplate/PriceTemplate";
 import Sponsors from "./components/Sponsors/Sponsors";
 import Subscribe from "./components/Subscribe/Subscribe";
 import FooterTemplate from "./components/FooterTemplate/FooterTemplate";
-// import Feedback from "./components/Feedback/Feedback";
+import Feedback from "./components/Feedback/Feedback";
 import MenuTemplate from "./components/MenuTemplate/MenuTemplate";
-// import sliderBlock from '../src/constants/Sliders'
+import sliderBlock from '../src/constants/Sliders'
 import ModalTemplate from "./components/ModalTemplate/ModalTemplate";
 
 
@@ -52,9 +52,9 @@ function App() {
                   <Sponsors />
                   <Subscribe />
               </div>
-          {/*<Feedback*/}
-          {/*    sliderBlock={sliderBlock}*/}
-          {/*/>*/}
+          <Feedback
+              sliderBlock={sliderBlock}
+          />
           <FooterTemplate />
       </>
 );
